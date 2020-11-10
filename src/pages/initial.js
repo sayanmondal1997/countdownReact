@@ -10,7 +10,6 @@ function Initial(props) {
 //   const history = useHistory();
 //   const handleClick = () => history.push('/goodbye');
   useEffect(() => {
-    console.log('hjgyjhgui jhgyg jhggu jyguy', props);
     props.dispatch(GetConfigurationAction((res) => {
       console.log('config response', res)
     }))
