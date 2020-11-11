@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { GetConfigurationAction } from './../actions/GetConfigurationAction';
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function Initial(props) {
   const [count, setCount] = useState(6);
   const [loading, loadingfunc] = useState(true);
   // const count=0;
-//   const history = useHistory();
+  const history = useHistory();
 //   const handleClick = () => history.push('/goodbye');
   useEffect(() => {
     props.dispatch(GetConfigurationAction((res) => {
@@ -21,7 +21,7 @@ function Initial(props) {
     // props.dispatch(GetConfigurationAction((res) => {
     //   console.log('config response', res)
       loadingfunc(false)
-      props.history.push(`/ldashboard`)
+      history.push(`/ldashboard`)
     //   console.log('sayanljj')
     // }))
 
