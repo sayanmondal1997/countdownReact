@@ -21,7 +21,7 @@ function Initial(props) {
     // props.dispatch(GetConfigurationAction((res) => {
     //   console.log('config response', res)
       loadingfunc(false)
-      props.history.push(`/ldashboard`)
+      props.history.push(`/countdown`)
     //   console.log('sayanljj')
     // }))
 
