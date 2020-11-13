@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { GetConfigurationAction } from './../actions/GetConfigurationAction';
+import Countdown from './Countdown';
 // import { useHistory } from "react-router-dom";
 
 function Initial(props) {
+  const [clicked, handleClick] = useState(false);
   const [count, setCount] = useState(6);
   const [loading, loadingfunc] = useState(true);
   // const count=0;
@@ -17,11 +19,12 @@ function Initial(props) {
 
   var click = (props) => {
       console.log('jbjj',props);
+      handleClick(true);
       
     // props.dispatch(GetConfigurationAction((res) => {
     //   console.log('config response', res)
       loadingfunc(false)
-      props.history.push(`/countdown`)
+      // props.history.push(`/countdown`)
     //   console.log('sayanljj')
     // }))
 
@@ -40,6 +43,7 @@ function Initial(props) {
           Click me
       </button>
       </div>
+      {clicked ? <Countdown  countDownStyle={{count: {y: true, m: true, d: true, h: true, min: true, s: true}, eventName: 'Event', eventDate: '12/07/2020', background: 'yellow', textStyle: {headercolor: 'black', timeleftColor: 'black', headerSize: '20px', timeleftSize: '25px', fontFamily: 'fantasy'}, borderradius: '10px'}} ></Countdown> : null}
     </div>
   );
 }
