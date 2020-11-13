@@ -68,7 +68,7 @@ function Countdown(props) {
       }
       {props.countDownStyle ? 
         <div style={{ paddingTop: '20px', paddingBottom: '20px', background: props.countDownStyle.background ? props.countDownStyle.background : 'cornflowerblue', borderRadius: props.countDownStyle.borderradius ? props.countDownStyle.borderradius : '15px' }}>
-          <h1 style={{ color: props.countDownStyle.textStyle.headercolor ? props.countDownStyle.textStyle.headercolor : 'darkblue', fontSize: props.countDownStyle.textStyle.headerSize ? props.countDownStyle.textStyle.headerSize : '20px', fontFamily: props.countDownStyle.textStyle.fontFamily ? props.countDownStyle.textStyle.fontFamily : 'serif' }}>{props.countDownStyle.eventName} {props.countDownStyle.eventYear} Countdown</h1>
+          <h1 style={{ color: props.countDownStyle.textStyle.headercolor ? props.countDownStyle.textStyle.headercolor : 'darkblue', fontSize: props.countDownStyle.textStyle.headerSize ? props.countDownStyle.textStyle.headerSize : '20px', fontFamily: props.countDownStyle.textStyle.fontFamily ? props.countDownStyle.textStyle.fontFamily : 'serif' }}>{props.countDownStyle.eventName} Countdown</h1>
           {(diff>0) ?
             <div> 
               {props.countDownStyle.count ? 
