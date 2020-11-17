@@ -91,7 +91,7 @@ function Initial(props) {
           Click me
       </button>
       </div>
-      {clicked ? <Countdown  countDownStyle={{count: {y: true, m: true, d: true, h: true, min: true, s: true}, eventName: 'Event', eventDate: '05/07/2030', background: 'yellow', textStyle: {headercolor: 'black', timeleftColor: 'black', headerSize: '20px', timeleftSize: '25px', fontFamily: 'fantasy'}, borderradius: '10px'}} ></Countdown> : null}
+      {clicked ? <Countdown  countDownStyle={{ eventName: 'Event', eventDate: '12/17/2520', background: 'yellow', textStyle: {headercolor: 'black', timeleftColor: 'black', headerSize: '20px', timeleftSize: '25px', fontFamily: 'fantasy'}, borderradius: '10px', animationClass: 'bounce'}} ></Countdown> : null}
     </div>
   );
 }
